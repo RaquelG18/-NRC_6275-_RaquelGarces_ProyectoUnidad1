@@ -51,7 +51,7 @@
                                 Servicios
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Tenática de redes Sociales</a></li>
+                                <li><a class="dropdown-item" href="#">Temática de redes Sociales</a></li>
                                 <li><a class="dropdown-item" href="#">Anuncios Publicitarios</a></li>
                                 <li><a class="dropdown-item" href="#">Contactar Proveedor</a></li>
                             </ul>
@@ -72,34 +72,35 @@
 
     <!-- Componentes del carrusel de imágenes -->
     <div class="container-fluid">
-    <div id="carouselControlador" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item">
-                <img class="d-block w-100"
-                    src="https://www.eluniverso.com/resizer/IFelZLFj1d17SDwXf0iB2XFegJQ=/889x667/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/SFMTTFVINJGI3IUOL2FZVBR6FQ.jpg"
-                    width="1390" height="480" alt="First slide">
+        <div id="carouselControlador" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://www.eluniverso.com/resizer/IFelZLFj1d17SDwXf0iB2XFegJQ=/889x667/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/SFMTTFVINJGI3IUOL2FZVBR6FQ.jpg"
+                        width="1390" height="480" alt="First slide">
+                </div>
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="https://st.depositphotos.com/1052928/5151/i/950/depositphotos_51517339-stock-photo-cow-sheep-pig-and-hen.jpg"
+                        width="1390" height="480" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://cervecerosdemexico.com/wp-content/uploads/2021/04/Por-que-Agroindustria-Cervecera-Mexicana.jpg"
+                        width="1390" height="480" alt="Third slide">
+                </div>
             </div>
-            <div class="carousel-item active">
-                <img class="d-block w-100"
-                    src="https://st.depositphotos.com/1052928/5151/i/950/depositphotos_51517339-stock-photo-cow-sheep-pig-and-hen.jpg"
-                    width="1390" height="480" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="https://cervecerosdemexico.com/wp-content/uploads/2021/04/Por-que-Agroindustria-Cervecera-Mexicana.jpg"
-                    width="1390" height="480" alt="Third slide">
-            </div>
+            <!--Controladores para las imagenes del carousel-->
+            <a class="carousel-control-prev" href="#carouselControlador" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselControlador" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
         </div>
-        <!--Controladores para las imagenes del carousel-->
-        <a class="carousel-control-prev" href="#carouselControlador" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselControlador" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-        </a>
     </div>
-</div>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -113,14 +114,20 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
     </script>
 
+
+    <nav class="nav flex-column" style="background-color: #55f846 ;">
+        <a class="nav-link active" aria-current="page" href="#">¿Quiénes somos?</a>
+        <a class="nav-link" href="#">Política de privacidad</a>
+        <a class="nav-link" href="#">Contacto</a>
+    </nav>
     <!--Footer-->
-    <footer class="footer p-2"  style="background-color: #2ac91b ;">
+    <footer class="footer p-2" style="background-color: #2ac91b ;">
         <div class="container-footer align-text-center">
-            <center><p>© 2022 Universidad de las Fuerzas Armadas Espe.</p></center>
+            <center>
+                <p>© 2022 Universidad de las Fuerzas Armadas Espe.</p>
+            </center>
         </div>
     </footer>
-
-
 </body>
 
 </html>
