@@ -19,7 +19,7 @@
 
     <!-- Icono de la página -->
     <link rel="shorcut icon" href="https://cdn-icons-png.flaticon.com/512/1598/1598196.png" />
-    <title>Document</title>
+    <title>Agro Comercialízate</title>
 
 </head>
 
@@ -29,7 +29,7 @@
     <div class="contenedorNav">
         <nav class="navbar navbar-expand-lg" style="background-color: #2ac91b;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="https://cdn-icons.flaticon.com/png/512/3967/premium/3967911.png?token=exp=1654435830~hmac=29f16a8cb28d94254d56b76e0b135451"
                         width="75" height="75" alt="" width="30" height="24" class="d-inline-block align-text-right">
                     AGRO Comercialízate
@@ -42,27 +42,28 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
                         </li>
                         <!--Agregamos la lista desplegable para los servicios-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button"
                                 data-toggle="dropdown" aria-expanded="false">
-                                Servicios
+                                Servicios a Ofrecer
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Temática de redes Sociales</a></li>
-                                <li><a class="dropdown-item" href="#">Anuncios Publicitarios</a></li>
-                                <li><a class="dropdown-item" href="#">Contactar Proveedor</a></li>
+                                <li><a class="dropdown-item" href="/servicios">Servicios</a></li>
+                                <li><a class="dropdown-item" href="/temas">Temática de redes Sociales</a></li>
+                                <li><a class="dropdown-item" href="/anuncios">Anuncios Publicitarios</a></li>
+                                <li><a class="dropdown-item" href="/contProv">Contactar Proveedor</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Acerca de Nosotros</a>
+                            <a class="nav-link" href="/acerca">Acerca de Nosotros</a>
                         </li>
                     </ul>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href="login.html" class="btn btn-outline-dark  me-md-2" role="button"
+                    <a href="/registro" class="btn btn-outline-dark  me-md-2" role="button"
                         data-toggle="button">Registrarse</a>
                     <a href="login.html" class="btn btn-outline-dark" role="button" data-toggle="button">Ingresar</a>
                 </div>
@@ -101,6 +102,75 @@
             </a>
         </div>
     </div>
+    
+    <!--Creación del Blockquote-->
+    <blockquote style="background-color:#2ac91b;">
+        <center class="ali-MV p-3">
+            <Font color="black">
+                <h2>Comercialízate con nosostros</h2>
+            </Font>
+        </center>
+    </blockquote>
+    <div class="card-group">
+        <div class="card">
+          <img src="https://portalcentrooeste.com.br/wp-content/uploads/2018/02/agropecuaria-600x330.png" height="330px" class="card-img-top" alt="comercio">
+          <div class="card-body">
+            <h5 class="card-title">De a Conocer sus Productos</h5>
+            <p class="card-text">Si tiene números rojos en sus ingresos o eres emprendedor, no hay mejor oportunidad que esta, de a conocer los productos de su negocio aquí. Ahora!!.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src=" https://blog.intradebook.com/wp-content/uploads/2018/06/international-trade-definitions-1.png"  height="330px" class="card-img-top" alt="ingreso">
+          <div class="card-body">
+            <h5 class="card-title">LLegue a más Lugares</h5>
+            <p class="card-text">Mientras más personas conozcan de sus productos, a más lugares llegarán, dando la oprtunidad de volverse una empresa que exporte su producto internacionalmente.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://www.sistemaimpulsa.com/blog/wp-content/uploads/2019/02/aumentarlasventascrecer-es-63.jpg"  height="330px" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Incremente sus Ingresos al Máximo</h5>
+            <p class="card-text">Incremente los ingresos de us empresa al llegar a más lugares exportando sus productos, su bolsillo estará feliz.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+
+
+    <!--Contenedor final para información de la empresa-->
+    <nav class="nav navbar-expand-lg p-3" style="background-color: #55f846 ;">
+        <div>
+            <ul>
+                <h4><span>Nosotros</span></h4>
+                <li><a class="nav-link colorL" href="/quienes">¿Quiénes somos?</a></li>
+                <li><a class="nav-link colorL" href="/politica">Política de privacidad</a></li>
+                <li><a class="nav-link colorL" href="/contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="nav justify-content-end">
+            <ul>
+                <h4><span>Social</span></h4>
+                <li class="nav-item"><a class="nav-link colorL"
+                        href="https://www.facebook.com/Valerachel0218">Facebook</a>
+                </li>
+                <li class="nav-item"><a class="nav-link colorL" href="https://www.instagram.com/"> Instagram</a></li>
+                <li class="nav-item"><a class="nav-link colorL" href="https://www.youtube.com/"> Youtube</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Footer-->
+    <footer class="footer p-2" style="background-color: #2ac91b ;">
+        <div class="container-footer align-text-center">
+            <center>
+                <p>© 2022 Universidad de las Fuerzas Armadas Espe.</p>
+            </center>
+        </div>
+    </footer>
+
+
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -114,23 +184,21 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
     </script>
 
-
-    <nav class="nav flex-column" style="background-color: #55f846 ;">
-        <a class="nav-link active" aria-current="page" href="#">¿Quiénes somos?</a>
-        <a class="nav-link" href="#">Política de privacidad</a>
-        <a class="nav-link" href="#">Contacto</a>
-    </nav>
-    <!--Footer-->
-    <footer class="footer p-2" style="background-color: #2ac91b ;">
-        <div class="container-footer align-text-center">
-            <center>
-                <p>© 2022 Universidad de las Fuerzas Armadas Espe.</p>
-            </center>
-        </div>
-    </footer>
 </body>
 
 </html>
 
+<style>
+    .colorL {
+
+        color: black;
+
+
+    }
+
+    ul {
+        list-style-type: none;
+    }
+</style>
 <!-- <img src="https://cdn-icons.flaticon.com/png/512/3967/premium/3967911.png?token=exp=1654435830~hmac=29f16a8cb28d94254d56b76e0b135451"
                     width="75px" height="75px" class="d-inline-block align-top" alt="Logo">-->
