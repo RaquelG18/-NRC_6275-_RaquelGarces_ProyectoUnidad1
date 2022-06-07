@@ -71,56 +71,82 @@
 
     <!--Componentes para el login-->
     <div class="text-center">
-    
+
         <main class="form-signin w-100 m-auto">
-          <form>
-            <img class="mb-3" src="https://cdn-icons.flaticon.com/png/128/5645/premium/5645309.png?token=exp=1654638957~hmac=071aa1a905de036959ff21ee7aa025d7" alt="" width="80" height="70">
-            <h1 class="h3 mb-3 fw-normal">Iniciar Sesión</h1>
-        
-            <div class="form-floating">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Correo Electrónico</label>
-            </div>
-            <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Password</label>
-            </div>
-        
-            <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="remember-me"> Recordarme
-              </label>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar</button>
-           
-          </form>
-        </main>
-        
+            <form>
+                <img class="mb-3"
+                    src="https://cdn-icons.flaticon.com/png/128/5645/premium/5645309.png?token=exp=1654638957~hmac=071aa1a905de036959ff21ee7aa025d7"
+                    alt="" width="80" height="70">
+                <h1 class="h3 mb-3 fw-normal">Iniciar Sesión</h1>
 
-    <hr>
-
-    <div class="container-fluid">
-        <form action="" method="post" role="form">
-            <label>Usuario:</label>
-            <input type="text" placeholder="Ingrese un usuario" maxlength="30">
-            <label>Correo Electrónico:</label>
-            <input type="email" placeholder="Ingrese su correo" maxlength="30">
-            <label>Contraseña:</label>
-            <input type="password" placeholder="Ingrese una contraseña máximo de 8 dígitos" maxlength="8">
-            <label>Confirmar Contraseña:</label>
-            <input type="text" placeholder="Ingrese su nombre" maxlength="30">
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <input type="submit" name="register-submit" id="register-submit" tabindex="4"
-                        class="form-control btn btn-register btn-outline-dark" value="Registrarse">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Correo Electrónico</label>
                 </div>
-            </div>
-        </form>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
 
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Recordarme
+                    </label>
+                </div>
+                <div class="my-3">
+                    <sapn>No tienes cuenta? <a href="registrar">Regístrate</a></sapn><br>
+                    <span><a href="#">Recuperar Password</a></span>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar</button>
+
+            </form>
+        </main>
+
+        <!--Creación del Blockquote-->
+        <blockquote style="background-color:#bdf5f5;">
+            <center class="ali-MV p-3">
+                <Font color="black">
+                    <h4>¿No estás registrado?</h4>
+                    <p>
+                        <h4>Crea tu cuenta Aquí!!!</h4>
+                    </p>
+                </Font>
+            </center>
+        </blockquote>
+
+        <!--Componentes para el formulario de registro de usuario -->
+
+        <main class="form-signin w-100 m-auto">
+            <form>
+                <img class="mb-3" src="   https://cdn-icons-png.flaticon.com/128/3597/3597075.png" alt="" width="80"
+                    height="70">
+                <h1 class="h3 mb-3 fw-normal">Crear Cuenta</h1>
+
+                <div class="form-floating p-2">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="Ingrese su nombre">
+                    <label for="floatingInput">Nombre</label>
+                </div>
+                <div class="form-floating p-2">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="Teléfono">
+                    <label for="floatingInput">Teléfono</label>
+                </div>
+                <div class="form-floating p-2">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="Correo Electrónico">
+                    <label for="floatingInput">Correo Electrónico</label>
+                </div>
+                <div class="form-floating p-2">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating p-2">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Confirme su contraseña">
+                    <label for="floatingPassword">Confirme Password</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary registrar" type="submit">Registrarse</button>
+
+            </form>
+        </main>
     </div>
-    https://cdn-icons-png.flaticon.com/128/3597/3597075.png
-
-
 
     <!-- Componentes del navegador final para la información de la empresa-->
     <nav class="nav navbar-expand-lg p-3" style="background-color: rgb(208, 236, 247);">
@@ -192,32 +218,31 @@
         list-style-type: none;
     }
 
-.login {
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
+    .login {
+        display: flex;
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-}
+    .form-signin {
+        max-width: 330px;
+        padding: 15px;
+    }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
+    .form-signin .form-floating:focus-within {
+        z-index: 2;
+    }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 </style>

@@ -36,14 +36,9 @@ def contProveedor():
 
 
 
-#Definimos la ruta para registrarse 
+#Definimos la ruta para registrarse  e iniciar sesión
 @app.route("/registro")
 def  registro():
-    return render_template('registrar.html')
-
-#Definimos la ruta para iniciar sesión 
-@app.route("/iniciar")
-def  iniciar():
     return render_template('registrar.html')
 
  #Definimos la ruta para la subpagina quienes somos        
