@@ -5,28 +5,219 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Librerias de css en bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/f138f2a48c.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--Enlaces CDN de React-->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <!--react-dom permite insertar la apliación react dentro del div creado -->
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Icono de la página -->
+    <link rel="shorcut icon" href="https://cdn-icons-png.flaticon.com/512/1598/1598196.png" />
 
     <title>Login</title>
 </head>
 
 <body>
 
-    <div id="login"> </div>
-    <script>
-        const contenedor = document.getElementById('login') //guardamos dentro de esta variable la ubicación del div
+    <!-- Cabecera - Creación del contenedor Navbar o barra de navegación -->
+    <div class="contenedorNav">
+        <nav class="navbar navbar-expand-lg" style="background-color: skyblue;">
+            <div class="container-fluid">
+                <h5><a class="navbar-brand" href="/">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3227/3227831.png" width="75" height="75" alt=""
+                            width="30" height="24" class="d-inline-block align-text-right">
+                        AGRO Comercialízate
+                    </a></h5>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <h5><a class="nav-link active" aria-current="page" href="/">Inicio</a></h5>
+                        </li>
+                        <!--Agregamos la lista desplegable para los servicios-->
+                        <h5>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    Servicios a Ofrecer
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/servicios">Servicios</a></li>
+                                    <li><a class="dropdown-item" href="/temas">Temática de redes Sociales</a></li>
+                                    <li><a class="dropdown-item" href="/anuncios">Anuncios Publicitarios</a></li>
+                                    <li><a class="dropdown-item" href="/contProv">Contactar Proveedor</a></li>
+                                </ul>
+                            </li>
+                        </h5>
+                        <li class="nav-item">
+                            <h5><a class="nav-link" aria-current="page" href="/acerca">Acerca de Nosotros</a></h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="/registro" class="btn btn-outline-dark ">Ingresar</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--Componentes para el login-->
+    <div class="text-center">
+    
+        <main class="form-signin w-100 m-auto">
+          <form>
+            <img class="mb-3" src="https://cdn-icons.flaticon.com/png/128/5645/premium/5645309.png?token=exp=1654638957~hmac=071aa1a905de036959ff21ee7aa025d7" alt="" width="80" height="70">
+            <h1 class="h3 mb-3 fw-normal">Iniciar Sesión</h1>
         
-    
-    
-    
-    
-    
+            <div class="form-floating">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Correo Electrónico</label>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+        
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Recordarme
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar</button>
+           
+          </form>
+        </main>
+        
+
+    <hr>
+
+    <div class="container-fluid">
+        <form action="" method="post" role="form">
+            <label>Usuario:</label>
+            <input type="text" placeholder="Ingrese un usuario" maxlength="30">
+            <label>Correo Electrónico:</label>
+            <input type="email" placeholder="Ingrese su correo" maxlength="30">
+            <label>Contraseña:</label>
+            <input type="password" placeholder="Ingrese una contraseña máximo de 8 dígitos" maxlength="8">
+            <label>Confirmar Contraseña:</label>
+            <input type="text" placeholder="Ingrese su nombre" maxlength="30">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <input type="submit" name="register-submit" id="register-submit" tabindex="4"
+                        class="form-control btn btn-register btn-outline-dark" value="Registrarse">
+                </div>
+            </div>
+        </form>
+
+    </div>
+    https://cdn-icons-png.flaticon.com/128/3597/3597075.png
+
+
+
+    <!-- Componentes del navegador final para la información de la empresa-->
+    <nav class="nav navbar-expand-lg p-3" style="background-color: rgb(208, 236, 247);">
+        <div>
+            <ul>
+                <h4><span>Nosotros</span></h4>
+                <li><a class="nav-link colorL" href="/quienes">¿Quiénes somos?</a></li>
+                <li><a class="nav-link colorL" href="/politica">Política de privacidad</a></li>
+                <li><a class="nav-link colorL" href="/contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="nav justify-content-end">
+            <ul>
+                <h4><span>Social</span></h4>
+                <li class="nav-item"><a class="nav-link colorL"
+                        href="https://www.facebook.com/Valerachel0218">Facebook</a>
+                </li>
+                <li class="nav-item"><a class="nav-link colorL" href="https://www.instagram.com/">
+                        Instagram</a></li>
+                <li class="nav-item"><a class="nav-link colorL" href="https://www.youtube.com/">
+                        Youtube</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Footer-->
+    <footer class="footer p-2" style="background-color: skyblue;">
+        <div class="container-footer align-text-center">
+            <center>
+                <p>© 2022 Universidad de las Fuerzas Armadas Espe.</p>
+            </center>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
     </script>
 
 </body>
 
 </html>
+
+
+
+
+
+<style>
+    .colorL {
+
+        color: black;
+
+
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+.login {
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+</style>
