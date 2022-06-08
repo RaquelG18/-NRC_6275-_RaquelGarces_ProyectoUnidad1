@@ -62,9 +62,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href="/registro" class="btn btn-outline-dark ">Ingresar</a>
-                </div>
             </div>
         </nav>
     </div>
@@ -90,7 +87,7 @@
 
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" value="remember-me"> Recordarme
+                        <input type="checkbox" value="recordarme"> Recordarme
                     </label>
                 </div>
                 <div class="my-3">
@@ -106,9 +103,9 @@
         <blockquote style="background-color:#bdf5f5;">
             <center class="ali-MV p-3">
                 <Font color="black">
-                    <h4>¿No estás registrado?</h4>
+                    <h5>¿No estás registrado?</h5>
                     <p>
-                        <h4>Crea tu cuenta Aquí!!!</h4>
+                        <h5>Crea tu cuenta Aquí!!!</h5>
                     </p>
                 </Font>
             </center>
@@ -123,25 +120,29 @@
                 <h1 class="h3 mb-3 fw-normal">Crear Cuenta</h1>
 
                 <div class="form-floating p-2">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="Ingrese su nombre">
-                    <label for="floatingInput">Nombre</label>
+                    <input type="text" class="form-control" id="ingresoDatos" placeholder="Ingrese su nombre">
+                    <label for="ingresoDatos">Nombre</label>
                 </div>
                 <div class="form-floating p-2">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="Teléfono">
-                    <label for="floatingInput">Teléfono</label>
+                    <input type="number" class="form-control" id="ingresoDatos" placeholder="Teléfono">
+                    <label for="ingresoDatos">Teléfono</label>
                 </div>
                 <div class="form-floating p-2">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="Correo Electrónico">
-                    <label for="floatingInput">Correo Electrónico</label>
+                    <input type="text" class="form-control" id="ingresoDatos" placeholder="Dirección de la Empresa o local">
+                    <label for="ingresoDatos">Dirección</label>
                 </div>
                 <div class="form-floating p-2">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
-                    <label for="floatingPassword">Password</label>
+                    <input type="email" class="form-control" id="ingresoDatos" placeholder="Correo Electrónico">
+                    <label for="ingresoDatos">Correo Electrónico</label>
                 </div>
                 <div class="form-floating p-2">
-                    <input type="password" class="form-control" id="floatingPassword"
+                    <input type="password" class="form-control" id="ingresoClave" placeholder="Contraseña">
+                    <label for="ingresoClave">Password</label>
+                </div>
+                <div class="form-floating p-2">
+                    <input type="password" class="form-control" id="ingresoClave"
                         placeholder="Confirme su contraseña">
-                    <label for="floatingPassword">Confirme Password</label>
+                    <label for="ingresoClave">Confirme Password</label>
                 </div>
                 
                     <button class="w-100 btn btn-lg btn-outline-primary registrar" type="submit">Registrarse</button>
