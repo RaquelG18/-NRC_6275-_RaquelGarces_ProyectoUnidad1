@@ -27,7 +27,7 @@
 <body>
     <!-- Cabecera - Creación del contenedor Navbar o barra de navegación -->
     <div class="contenedorNav">
-        <nav class="navbar navbar-expand-lg" style="background-color: #a54bc0;">
+        <nav class="navbar navbar-expand-lg" style="background-color:  #a54bc0;;">
             <div class="container-fluid">
                 <h5><a class="navbar-brand" href="/">
                         <img src="https://cdn-icons-png.flaticon.com/512/3227/3227831.png" width="75" height="75" alt=""
@@ -62,12 +62,12 @@
         </nav>
     </div>
 
-    https://blog.legis.com.co/hubfs/Como-buscar-proveedores.jpg
-
-
     <!--Componentes para el login-->
-    <div class="container text-center">
+    <div class="container text-center my-4">
         <div class="row">
+            <!--Columna para la imagen-->
+            <div class="col fondo d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
+            </div>
             <!--Columna para el login-->
             <div class="col">
                 <form>
@@ -90,16 +90,11 @@
                         <label for="datosCli">Mensaje</label>
                     </div>
                     <div class="form-floating my-1">
-                    <!--Botón inicio de sesión-->
-                    <button class="w-100 btn btn-lg" style="background-color: #a54bc0;" type="submit">Enviar</button></div>
+                        <!--Botón inicio de sesión-->
+                        <button class="w-100 btn btn-lg" style="background-color: #a54bc0;"
+                            type="submit">Enviar</button></div>
                 </form>
             </div>
-            <!--Columna para la imagen-->
-            <div class="col">
-
-            </div>
-
-
         </div>
     </div>
 
@@ -168,5 +163,10 @@
 
     ul {
         list-style-type: none;
+    }
+
+    .fondo {
+        background-image: url( https://blog.legis.com.co/hubfs/Como-buscar-proveedores.jpg);
+        background-position: center center;
     }
 </style>
