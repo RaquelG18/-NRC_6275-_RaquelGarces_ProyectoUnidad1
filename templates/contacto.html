@@ -1,12 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!--Librerias de css en bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+    <script src="https://kit.fontawesome.com/f138f2a48c.js" crossorigin="anonymous"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Icono de la página -->
+    <link rel="shorcut icon" href="https://cdn-icons-png.flaticon.com/512/1598/1598196.png" />
+    <title>Contactar Proveedores</title>
+
 </head>
+
 <body>
-    
+    <!-- Cabecera - Creación del contenedor Navbar o barra de navegación -->
+    <div class="contenedorNav">
+        <nav class="navbar navbar-expand-lg" style="background-color:  #a54bc0;;">
+            <div class="container-fluid">
+                <h5><a class="navbar-brand" href="/">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3227/3227831.png" width="75" height="75" alt=""
+                            width="30" height="24" class="d-inline-block align-text-right">
+                        AGRO Comercialízate
+                    </a></h5>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <h5><a class="nav-link" aria-current="page" href="/servicios">Servicios</a></h5>
+                        </li>
+
+                        <li class="nav-item">
+                            <h5><a class="nav-link" aria-current="page" href="/temas">Temática de redes Sociales</a>
+                            </h5>
+                        </li>
+
+                        <li class="nav-item">
+                            <h5><a class="nav-link" aria-current="page" href="/anuncios">Anuncios Publicitarios</a></h5>
+                        </li>
+
+                        <li class="nav-item">
+                            <h5><a class="nav-link active" aria-current="page" href="/contProv">Contactar Proveedor</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="/registro" class="btn btn-outline-dark me-md-2">Registrarse</a>
+                    <a href="/registro" class="btn btn-outline-dark ">Ingresar</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--Componentes para el login-->
+    <div class="container text-center my-4">
+        <div class="row">
+            <!--Columna para la imagen-->
+            <div class="col fondo d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
+            </div>
+            <!--Columna para el login-->
+            <div class="col">
+                <form>
+                    <img class="mb-3" src="https://cdn-icons-png.flaticon.com/128/4144/4144781.png" alt="" width="80"
+                        height="70">
+                    <h1 class="h3 mb-3 fw-normal">Contáctanos</h1>
+
+                    <div class="form-floating m-md-5">
+                        <h5><label for="datosCli">Teléfono: 0993965108</label></h5>
+                    </div>
+                    
+                    <div class="form-floating m-md-5">
+                        <h5><label for="datosCli">Email: orgarces@espe.edu.ec</label></h5>
+                    </div>
+                    <div class="form-floating m-md-5">
+                     
+                    <h1>           </h1>
+
+                    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Componentes del navegador final para la información de la empresa-->
+    <nav class="nav navbar-expand-lg p-3" style="background-color: #c980df;">
+        <div>
+            <ul>
+                <h4><span>Nosotros</span></h4>
+                <li><a class="nav-link colorL" href="/quienes">¿Quiénes somos?</a></li>
+                <li><a class="nav-link colorL" href="/politica">Política de privacidad</a></li>
+                <li><a class="nav-link colorL" href="/contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="nav justify-content-end">
+            <ul>
+                <h4><span>Social</span></h4>
+                <li class="nav-item"><a class="nav-link colorL"
+                        href="https://www.facebook.com/Valerachel0218">Facebook</a>
+                </li>
+                <li class="nav-item"><a class="nav-link colorL" href="https://www.instagram.com/">
+                        Instagram</a></li>
+                <li class="nav-item"><a class="nav-link colorL" href="https://www.youtube.com/">
+                        Youtube</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Footer-->
+    <footer class="footer p-2" style="background-color: #a54bc0;">
+        <div class="container-footer align-text-center">
+            <center>
+                <p>© 2022 Universidad de las Fuerzas Armadas Espe.</p>
+            </center>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+
 </body>
+
 </html>
+
+<style>
+    .colorL {
+
+        color: black;
+
+
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .fondo {
+        background-image: url( https://eventosfpcmac.com/sim2021/wp-content/uploads/2021/09/contacto.png);
+        background-position: center center;
+    }
+</style>
