@@ -56,7 +56,7 @@
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <a href="/registro" class="btn btn-outline-dark me-md-2">Registrarse</a>
-                    <a href="/registro" class="btn btn-outline-dark ">Ingresar</a>
+                    <a href="/login" class="btn btn-outline-dark ">Ingresar</a>
                 </div>
             </div>
         </nav>
@@ -70,23 +70,21 @@
             </div>
             <!--Columna para el login-->
             <div class="col">
-                <form>
+                <form method="post" action="{{url_for('enviar')}}">
                     <img class="mb-3" src="https://cdn-icons-png.flaticon.com/128/4237/4237733.png" alt="" width="80"
                         height="70">
                     <h1 class="h3 mb-3 fw-normal">Contactar Proveedores</h1>
 
                     <div class="form-floating my-1">
-                        <input type="text" class="form-control" id="datosCli"
-                            placeholder="Ingrese el nombre de su empresa">
+                        <input type="text" class="form-control" id="datosCli" placeholder="" name="nombre_empresa">
                         <label for="datosCli">Nombre de Empresa</label>
                     </div>
                     <div class="form-floating my-1">
-                        <input type="email" class="form-control" id="datosCli" placeholder="Ingrese su usuario o email">
+                        <input type="email" class="form-control" id="datosCli" placeholder="" name="correoElect">
                         <label for="datosCli">Correo Electrónico</label>
                     </div>
                     <div class="form-floating my-1">
-                        <textarea class="form-control" id="datosCli" rows="3"
-                            placeholder="Deje su mensaje con especificaciones extras"></textarea>
+                        <textarea class="form-control" id="datosCli" rows="3" placeholder=" " name="mensaje"></textarea>
                         <label for="datosCli">Mensaje</label>
                     </div>
                     <div class="form-floating my-1">
@@ -97,6 +95,39 @@
             </div>
         </div>
     </div>
+
+    <!--Componentes para la lista de datos-->
+    <section class="lista_datos">
+        <!--controlador de la tabla de datos-->
+        <table class="table">
+            <thead class="table-dark tablax">
+                <tr>
+                    <!--Ingresamos las variables-->
+                    <th scope="col">Nombre de la Empresa</th>
+                    <th scope="col">Correo Electrónico</th>
+                    <th scope="col">Mensaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Accedemos a la lista con un for-->
+                {% for listaDatos in listaUsuario %}
+                <tr>
+                        <!--Agrega nombre empresa-->
+                        <th>{{listaDatos.nombre_empresa}}</th>
+                        <!--Agregar correo-->
+                        <th>{{listaDatos.correoElect }}</th>
+                        <!--Agregar el mensaje-->
+                        <th>{{listaDatos.mensaje}}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <!--Boton para borrar-->
+        <form action="{{url_for('borrar')}}" method="post" class="card-body">
+            <button type="submit" class="btn boton_eliminar btn-outline-dark">BORRAR</button>
+        </form>
+    </section>
+
 
     <!-- Componentes del navegador final para la información de la empresa-->
     <nav class="nav navbar-expand-lg p-3" style="background-color: #c980df;">
@@ -166,7 +197,7 @@
     }
 
     .fondo {
-        background-image: url( https://blog.legis.com.co/hubfs/Como-buscar-proveedores.jpg);
+        background-image: url(https://blog.legis.com.co/hubfs/Como-buscar-proveedores.jpg);
         background-position: center center;
     }
 </style>
