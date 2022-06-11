@@ -18,7 +18,7 @@
     <!-- Icono de la página -->
     <link rel="shorcut icon" href="https://cdn-icons-png.flaticon.com/512/1598/1598196.png" />
 
-    <title>Registrarse</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -66,6 +66,38 @@
         </nav>
     </div>
 
+    <!--Componentes para el login-->
+    <div class="text-center">
+
+        <main class="form-signin w-100 m-auto">
+            <form>
+                <img class="mb-3"
+                    src="https://cdn-icons.flaticon.com/png/128/5645/premium/5645106.png?token=exp=1654887100~hmac=752073d9c24663b1bb7dec8cd6e75535"
+                    alt="" width="80" height="70">
+                <h1 class="h3 mb-3 fw-normal">Iniciar Sesión</h1>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <label for="floatingInput">Correo Electrónico</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                    <label for="floatingPassword">Password</label>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="recordarme"> Recordarme
+                    </label>
+                </div>
+                <div class="my-3">
+                    <sapn>No tienes cuenta? <a href="/registro">Regístrate</a></sapn><br>
+                    <span><a href="registro">Recuperar Password</a></span>
+                </div>
+                <button class="w-100 btn btn-lg btn-outline-primary" type="submit">Iniciar</button>
+
+            </form>
+        </main>
 
         <!--Creación del Blockquote-->
         <blockquote style="background-color:#bdf5f5;">
@@ -81,42 +113,6 @@
 
         <!--Componentes para el formulario de registro de usuario -->
 
-        <main class="form-signin w-100 m-auto">
-            <form>
-                <img class="mb-3" src="   https://cdn-icons-png.flaticon.com/128/3597/3597075.png" alt="" width="80"
-                    height="70">
-                <h1 class="h3 mb-3 fw-normal">Crear Cuenta</h1>
-
-                <div class="form-floating p-2">
-                    <input type="text" class="form-control" id="ingresoDatos" placeholder="Ingrese su nombre">
-                    <label for="ingresoDatos">Nombre</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="number" class="form-control" id="ingresoDatos" placeholder="Teléfono">
-                    <label for="ingresoDatos">Teléfono</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="text" class="form-control" id="ingresoDatos" placeholder="Dirección de la Empresa o local">
-                    <label for="ingresoDatos">Dirección</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="email" class="form-control" id="ingresoDatos" placeholder="Correo Electrónico">
-                    <label for="ingresoDatos">Correo Electrónico</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="password" class="form-control" id="ingresoClave" placeholder="Contraseña">
-                    <label for="ingresoClave">Password</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="password" class="form-control" id="ingresoClave"
-                        placeholder="Confirme su contraseña">
-                    <label for="ingresoClave">Confirme Password</label>
-                </div>
-                
-                    <button class="w-100 btn btn-lg btn-outline-primary registrar" type="submit">Registrarse</button>
-
-            </form>
-        </main>
     </div>
 
     <!-- Componentes del navegador final para la información de la empresa-->
