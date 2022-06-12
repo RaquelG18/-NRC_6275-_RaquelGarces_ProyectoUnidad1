@@ -3,15 +3,21 @@ from flask import Flask, redirect, render_template, request, url_for
 
 # Inicializamos la aplicación y la carpeta template
 app = Flask(__name__, template_folder="templates")
+app.config['SECRET_KEY'] = '7110c8ae51a4b5af97be6534caef90e4bb9bdcb3380af008f90b23a5d1616bf319bc298105da20fe'
 
 # Definimos el decorador principal
 
+
 @app.route("/")
 def index():  # Creamos la función
+    # Los parámetros page y list los podríamos utilizar para paginar el listado
+    page = request.args.get('page', 1)  # estamos pidiendo la primera página
+    list = request.args.get('list', 10)  # Los primeros diez post
     # Redirección a la pagina index.html
     return render_template('index.html')
 
 # Definimos el decorador para la subpagina acerca de nosotros
+
 
 @app.route("/acerca")
 def acerca():  # Creamos la función acerca
@@ -97,19 +103,37 @@ def borrar():  # cramos la función borrar
 # Definimos el decorador para registrarse
 
 
-@app.route("/registro")
+@app.route("/registro/", methods=["GET", "POST"])
 def registro():  # creamos la función registro
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        clave = request.form['clave']
+        if name == '' or email == '' or clave == '':
+            return redirect(url_for('registro'))
+        else:
+            return redirect(url_for('login'))
+
     # Renderiza a la pag registrar.html
     return render_template('registrar.html')
 
+# ***************************************************************************************************************************************
 # Definimos el decorador para iniciar sesión
 
 
-@app.route("/login")
+@app.route("/login/", methods=["GET", "POST"])
 def login():  # creamos la función login
+    if request.method == 'POST':
+        email = request.form['email']
+        clave = request.form['clave']
+        if email == '' or clave == '':
+            return redirect(url_for('login'))
+        else:
+            return redirect(url_for('temas'))
+
     return render_template('login.html')  # Renderiza a la pag login.html
 
- # Definimos el decorador para la subpagina quienes somos
+    # Definimos el decorador para la subpagina quienes somos
 
 
 @app.route("/quienes")

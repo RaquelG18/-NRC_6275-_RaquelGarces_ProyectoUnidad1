@@ -67,29 +67,30 @@
     </div>
 
     <!--Componentes para el formulario de registro de usuario -->
-
+ 
     <main class="form-signin w-100 m-auto">
-        <form method="post" action="{{url_for('registra')}}">
+        <form method="post" action="{{url_for('registro')}}">
             <img class="mb-3" src="   https://cdn-icons-png.flaticon.com/128/3597/3597075.png" alt="" width="80"
                 height="70">
             <h1 class="h3 mb-3 fw-normal">Crear Cuenta</h1>
-
+ 
             <div class="form-floating p-2">
-                <input type="text" class="form-control" id="ingresoDatos" name="nombre">
+                <input type="text" class="form-control" id="ingresoDatos" name="name" required>
                 <label for="ingresoDatos">Nombre</label>
             </div>
             <div class="form-floating p-2">
-                <input type="email" class="form-control" id="ingresoDatos" name="email">
+                <input type="email" class="form-control" id="ingresoDatos" name="email" required>
                 <label for="ingresoDatos">Correo Electrónico</label>
             </div>
             <div class="form-floating p-2">
-                <input type="password" class="form-control" id="ingresoClave" name="clave">
+                <input type="password" class="form-control" id="ingresoClave" name="clave" required>
                 <label for="ingresoClave">Contraseña</label>
             </div>
             <div class="my-2 mx-4">
                 <sapn>Ya tienes cuenta? <a href="/login">Inicia Sesión</a></sapn><br>
             </div>
-            <button class="w-100 btn btn-lg btn-outline-primary registrar" type="submit">Registrarse</button>
+            <button class="w-100 btn btn-lg btn-outline-primary registrar" name="registro"
+                type="submit">Registrarse</button>
         </form>
     </main>
 

@@ -70,18 +70,18 @@
     <div class="text-center">
 
         <main class="form-signin w-100 m-auto">
-            <form>
+            <form method="post" action="{{url_for('login')}}">
                 <img class="mb-3"
-                    src="https://cdn-icons.flaticon.com/png/128/5645/premium/5645106.png?token=exp=1655045525~hmac=e01a0716df1f593e306aee93a529b8c9"
+                    src="https://cdn-icons.flaticon.com/png/128/5645/premium/5645106.png?token=exp=1655052751~hmac=c1faa79d5c0240e0ade67e21ae0edaa4"
                     alt="" width="80" height="70">
                 <h1 class="h3 mb-3 fw-normal">Iniciar Sesión</h1>
 
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput" name="name" required>
+                    <input type="email" class="form-control" id="floatingInput" name="email" required>
                     <label for="floatingInput">Correo Electrónico</label>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" name="contraseña" required>
+                    <input type="password" class="form-control" id="floatingPassword" name="clave" required>
                     <label for="floatingPassword">Password</label>
                 </div>
 
