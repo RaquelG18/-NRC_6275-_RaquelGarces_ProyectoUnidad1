@@ -66,59 +66,32 @@
         </nav>
     </div>
 
+    <!--Componentes para el formulario de registro de usuario -->
 
-        <!--Creación del Blockquote-->
-        <blockquote style="background-color:#bdf5f5;">
-            <center class="ali-MV p-3">
-                <Font color="black">
-                    <h5>¿No estás registrado?</h5>
-                    <p>
-                        <h5>Crea tu cuenta Aquí!!!</h5>
-                    </p>
-                </Font>
-            </center>
-        </blockquote>
+    <main class="form-signin w-100 m-auto">
+        <form>
+            <img class="mb-3" src="   https://cdn-icons-png.flaticon.com/128/3597/3597075.png" alt="" width="80"
+                height="70">
+            <h1 class="h3 mb-3 fw-normal">Crear Cuenta</h1>
 
-        <!--Componentes para el formulario de registro de usuario -->
-
-        <main class="form-signin w-100 m-auto">
-            <form>
-                <img class="mb-3" src="   https://cdn-icons-png.flaticon.com/128/3597/3597075.png" alt="" width="80"
-                    height="70">
-                <h1 class="h3 mb-3 fw-normal">Crear Cuenta</h1>
-
-                <div class="form-floating p-2">
-                    <input type="text" class="form-control" id="ingresoDatos" placeholder="Ingrese su nombre">
-                    <label for="ingresoDatos">Nombre</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="number" class="form-control" id="ingresoDatos" placeholder="Teléfono">
-                    <label for="ingresoDatos">Teléfono</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="text" class="form-control" id="ingresoDatos" placeholder="Dirección de la Empresa o local">
-                    <label for="ingresoDatos">Dirección</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="email" class="form-control" id="ingresoDatos" placeholder="Correo Electrónico">
-                    <label for="ingresoDatos">Correo Electrónico</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="password" class="form-control" id="ingresoClave" placeholder="Contraseña">
-                    <label for="ingresoClave">Password</label>
-                </div>
-                <div class="form-floating p-2">
-                    <input type="password" class="form-control" id="ingresoClave"
-                        placeholder="Confirme su contraseña">
-                    <label for="ingresoClave">Confirme Password</label>
-                </div> 
-                    <button class="w-100 btn btn-lg btn-outline-primary registrar" type="submit">Registrarse</button>
-            </form>
-        </main>
-        <div class="form-floating p-2">
-            <sapn>Ya tienes cuenta? <a href="/login">Iniciar Sesión</a></sapn><br>
-        </div>
-    </div>
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="ingresoDatos" name="nombre">
+                <label for="ingresoDatos">Nombre</label>
+            </div>
+            <div class="form-floating p-2">
+                <input type="email" class="form-control" id="ingresoDatos" name="email">
+                <label for="ingresoDatos">Correo Electrónico</label>
+            </div>
+            <div class="form-floating p-2">
+                <input type="password" class="form-control" id="ingresoClave" name="clave">
+                <label for="ingresoClave">Contraseña</label>
+            </div>
+            <div class="my-2 mx-4">
+                <sapn>Ya tienes cuenta? <a href="/login">Inicia Sesión</a></sapn><br>
+            </div>
+            <button class="w-100 btn btn-lg btn-outline-primary registrar" type="submit">Registrarse</button>
+        </form>
+    </main>
 
     <!-- Componentes del navegador final para la información de la empresa-->
     <!-- Componentes del navegador final para la información de la empresa-->
