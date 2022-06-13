@@ -154,7 +154,7 @@ def registro():  # creamos la función registro
         if name == '' or email == '' or clave == '':
             return redirect(url_for('registro'))
         else:
-            return redirect(url_for('login'))
+            return redirect(url_for('index'))
 
     # Renderiza a la pag registrar.html
     return render_template('registrar.html')

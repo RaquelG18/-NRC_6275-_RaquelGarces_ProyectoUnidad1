@@ -142,16 +142,17 @@
             <tbody>
                 <!--Accedemos a la lista con un for-->
                 {% for datosRedes in temasRedes %}
-                <form  action="{{url_for('borrar1')}}" method="post" class="card-body"></form>
-                <tr>
-                    <!--Agrega nombre redS-->
-                    <th>{{datosRedes.redS}}</th>
-                    <!--Agregar sectAgro-->
-                    <th>{{datosRedes.sectAgro }}</th>
-                    <!--Agregar el mensaje-->
-                    <th>{{datosRedes.mensaje}}</th>
-                    <th><button type="submit" class="btn" style="background-color: #63bfe9;">X</button></th> 
-                </tr> 
+                <form action="{{url_for('borrar1')}}" method="post" class="card-body">
+                    <tr>
+                        <!--Agrega nombre redS-->
+                        <th>{{datosRedes.redS}}</th>
+                        <!--Agregar sectAgro-->
+                        <th>{{datosRedes.sectAgro }}</th>
+                        <!--Agregar el mensaje-->
+                        <th>{{datosRedes.mensaje}}</th>
+                        <th><button type="submit" class="btn" style="background-color: #63bfe9;">X</button></th>
+                    </tr>
+                </form>
                 {% endfor %}
             </tbody>
         </table>
