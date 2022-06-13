@@ -32,17 +32,58 @@ def servicios():  # Creamos la función servicios
     # Redirección a la pagina servicios.html
     return render_template('servicios.html')
 
-# Definimos el decorador para la pag de tematica para redes sociales
+# ****************************************************************************************************************************+
 
 
 @app.route("/temas")
-def temas():  # Creamos la función temas
-    # Redirección a la pagina tematica.html
-    return render_template('tematica.html')
+def temas():
+
+  # Redirección a la pagina tematica.html
+    return render_template('tematica.html', temasRedes=temasRedes)
+
+
+# creamos un array para los datos ingresados en la pag temática
+temasRedes = []
+
+# Definimos el decorador para la pag de tematica para redes sociales
+
+
+@app.route("/temasR", methods=['POST'])
+def temasR():  # Creamos la función temas
+ # utilizamos el método post
+    if request.method == 'POST':
+        # Extraemos los datos ingresados en el input de la descripcion de contactar proveedores
+        redS = request.form['redS']
+        sectAgro = request.form['sectAgro']
+        mensaje = request.form['mensaje']
+        # Creamos la condición para que no guarde el registro cuando los campos estén vacíos
+        if redS == '' or sectAgro == '' or mensaje == '':
+            return redirect(url_for('temas'))
+        else:
+            # Agrega a la lista los campos llenos
+            temasRedes.append(
+                {'redS': redS, 'sectAgro': sectAgro, 'mensaje': mensaje})
+            # redireccion a la funcion  temas
+            return redirect(url_for('temas'))
+
+#Creamos el decorador para borrar contenido de la tabla de temática de redes sociales 
+
+@app.route('/borrar1', methods=['POST'])
+def borrar1():  # cramos la función borrar
+    if request.method == 'POST':  # usamos el metodo Post
+        if temasRedes == []:  # array temasRedes
+            # redireccion a la funcion  temas
+            return redirect(url_for('temas'))
+        else:
+            temasRedes.clear()  # limpiar lista de usuario
+            # redireccion a la funcion  temas
+            return redirect(url_for('temas'))
+
+
+# *******************************************************************************************************************************
+
 
 # Definimos el decorador para la pag de anuncios publicitarios
-
-
 @app.route("/anuncios")
 def anuncios():  # Creamos la función anuncios
     # Redirección a la pagina anuncios.html
@@ -97,6 +138,7 @@ def borrar():  # cramos la función borrar
             listaUsuario.clear()  # limpiar lista de usuario
             # redireccion a la funcion  contProveedor
             return redirect(url_for('contProveedor'))
+
 
 #################################################################################################################################################################
 
@@ -167,3 +209,10 @@ def politica():  # creamos la función politica
 # Creamos el main para que la app se pueda ejecutar
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+
+
+

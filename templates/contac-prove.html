@@ -107,26 +107,27 @@
                     <th scope="col">Nombre de la Empresa</th>
                     <th scope="col">Correo Electrónico</th>
                     <th scope="col">Mensaje</th>
+                    <th scope="col">Eliminar</th>
                 </tr>
             </thead>
             <tbody>
                 <!--Accedemos a la lista con un for-->
                 {% for listaDatos in listaUsuario %}
-                <tr>
-                    <!--Agrega nombre empresa-->
-                    <th>{{listaDatos.nombre_empresa}}</th>
-                    <!--Agregar correo-->
-                    <th>{{listaDatos.correoElect }}</th>
-                    <!--Agregar el mensaje-->
-                    <th>{{listaDatos.mensaje}}</th>
+                <form  action="{{url_for('borrar')}}" method="post" class="card-body">
+                    <tr>
+                        <!--Agrega nombre empresa-->
+                        <th>{{listaDatos.nombre_empresa}}</th>
+                        <!--Agregar correo-->
+                        <th>{{listaDatos.correoElect }}</th>
+                        <!--Agregar el mensaje-->
+                        <th>{{listaDatos.mensaje}}</th>
+                    
+                   <th><button type="submit" class="btn boton_eliminar" style="background-color: #c980df;">X</button></th> 
                 </tr>
+                </form>
                 {% endfor %}
             </tbody>
         </table>
-        <!--Boton para borrar-->
-        <form action="{{url_for('borrar')}}" method="post" class="card-body">
-            <button type="submit" class="btn boton_eliminar btn-outline-dark">BORRAR</button>
-        </form>
     </section>
 
     <!-- Componentes del navegador final para la información de la empresa-->
