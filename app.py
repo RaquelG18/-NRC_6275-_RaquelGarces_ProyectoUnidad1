@@ -50,10 +50,10 @@ temasRedes = []
 
 @app.route("/temasR", methods=['POST'])
 def temasR():  # Creamos la función temas
-    data = request.form
-    with open('resultado.txt', 'w') as archivo:  # Abrimos un archivo de texto
-        archivo.write(str(data))  # Se escribe el archivo de texto
-    print(data)  # Imprime en el achivo de texto el registro del formulario
+    datos = request.form
+    with open('resultado.txt', 'a') as archivo:  # Abrimos un archivo de texto y anexamos la infromación
+        archivo.write(str(datos))  # Se escribe el archivo de texto
+    print(datos)  # Imprime en el achivo de texto el registro del formulario
     # utilizamos el método post
     if request.method == 'POST':
         # Extraemos los datos ingresados en el input de la descripcion de contactar proveedores
@@ -115,7 +115,7 @@ listaUsuario = []
 # creamos la función enviar
 def enviar():
     data = request.form
-    with open('resultado.txt', 'w') as archivo:  # Abrimos un archivo de texto
+    with open('resultado.txt', 'a') as archivo:  # Abrimos un archivo de texto
         archivo.write(str(data))  # Se escribe el archivo de texto
     print(data)  # Imprime en el achivo de texto el registro del formulario
     # utilizamos el método post
@@ -157,7 +157,7 @@ def borrar():  # cramos la función borrar
 @app.route("/registro/", methods=["GET", "POST"])
 def registro():  # creamos la función registro
     data = request.form
-    with open('resultado.txt', 'w') as archivo:
+    with open('resultado.txt', 'a') as archivo:
         archivo.write(str(data))
     print(data)
     if request.method == 'POST':
@@ -180,7 +180,7 @@ def registro():  # creamos la función registro
 @app.route("/login/", methods=["GET", "POST"])
 def login():  # creamos la función login
     data = request.form
-    with open('registro.txt', 'w') as archivo:
+    with open('registro.txt', 'a') as archivo:
         archivo.write(str(data))
     print(data)
     if request.method == 'POST':
