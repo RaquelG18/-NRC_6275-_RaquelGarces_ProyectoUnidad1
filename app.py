@@ -94,13 +94,13 @@ def anuncios():  # Creamos la función anuncios
 
 
 @app.route("/contProv")
-def contProveedor():  # Creamos la función def contProveedor(): #Creamos la función anuncios
+def contProveedor():  # Creamos la función def contProveedor():
 
     # Redirección a la pagina contac-prove.html y el array listaUsuario
     return render_template('contac-prove.html', listaUsuario=listaUsuario)
 
 
-# Creamos un array lista Usuario para la peticion del cliente en la pag contactar proveedor
+# Creamos un array lista Usuario 
 listaUsuario = []
 
 # Controlador del decorador de envio de datos
