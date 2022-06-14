@@ -113,7 +113,7 @@
             <tbody>
                 <!--Accedemos a la lista con un for-->
                 {% for listaDatos in listaUsuario %}
-                <form  action="{{url_for('borrar')}}" method="post" class="card-body">
+                <form action="{{url_for('borrar')}}" method="post" class="card-body">
                     <tr>
                         <!--Agrega nombre empresa-->
                         <th>{{listaDatos.nombre_empresa}}</th>
@@ -121,15 +121,15 @@
                         <th>{{listaDatos.correoElect }}</th>
                         <!--Agregar el mensaje-->
                         <th>{{listaDatos.mensaje}}</th>
-                    
-                   <th><button type="submit" class="btn boton_eliminar" style="background-color: #c980df;">X</button></th> 
-                </tr>
+
+                        <th><button type="submit" class="btn boton_eliminar"
+                                style="background-color: #c980df;">X</button></th>
+                    </tr>
                 </form>
                 {% endfor %}
             </tbody>
         </table>
     </section>
-
     <!-- Componentes del navegador final para la información de la empresa-->
     <nav class="nav navbar-expand-lg p-3" style="background-color: #c980df;">
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">

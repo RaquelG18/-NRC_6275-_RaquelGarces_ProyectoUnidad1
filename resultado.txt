@@ -1,0 +1,1 @@
+ImmutableMultiDict([('name', 'Danna'), ('email', 'orgarces@espe.edu.ec'), ('clave', '12345678'), ('registro', '')])

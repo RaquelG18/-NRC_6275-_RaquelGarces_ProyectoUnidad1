@@ -80,7 +80,7 @@ def borrar1():  # cramos la función borrar
             return redirect(url_for('temas'))
 
 
-# *******************************************************************************************************************************
+# ***************************************************************************
 
 
 # Definimos el decorador para la pag de anuncios publicitarios
@@ -89,7 +89,7 @@ def anuncios():  # Creamos la función anuncios
     # Redirección a la pagina anuncios.html
     return render_template('anuncios.html')
 
-###########################################################################################################################################################
+#############################################################################
 # Definimos el decorador para la pag contactar proveedores
 
 
@@ -147,6 +147,10 @@ def borrar():  # cramos la función borrar
 
 @app.route("/registro/", methods=["GET", "POST"])
 def registro():  # creamos la función registro
+    data = request.form
+    with open('resultado.txt', 'w') as archivo:
+        archivo.write(str(data))
+    print(data)
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
@@ -158,6 +162,9 @@ def registro():  # creamos la función registro
 
     # Renderiza a la pag registrar.html
     return render_template('registrar.html')
+
+    
+   
 
 # ***************************************************************************************************************************************
 # Definimos el decorador para iniciar sesión
