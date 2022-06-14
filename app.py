@@ -181,7 +181,7 @@ def registro():  # creamos la función registro
 def login():  # creamos la función login
     data = request.form
     with open('registro.txt', 'w') as archivo:
-        archivo.write(data)
+        archivo.write(str(data))
     print(data)
     if request.method == 'POST':
         email = request.form['email']
