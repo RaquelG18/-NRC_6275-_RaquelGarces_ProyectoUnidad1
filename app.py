@@ -44,23 +44,25 @@ def temas():
 
 # creamos un array para los datos ingresados en la pag temática
 temasRedes = []
-
 # Definimos el decorador para la pag de tematica para redes sociales
-
-
 @app.route("/temasR", methods=['POST'])
 def temasR():  # Creamos la función temas
     datos = request.form
-    with open('resultado.txt', 'a') as archivo:  # Abrimos un archivo de texto y anexamos la infromación
-        archivo.write(str(datos))  # Se escribe el archivo de texto
-    print(datos)  # Imprime en el achivo de texto el registro del formulario
+    # Abrimos un archivo de texto y anexamos la infromación
+    with open('resultado.txt', 'a') as archivo:
+        # Se escribe el archivo de texto
+        archivo.write(str(datos))
+    print(datos)  # Imprime en el achivo de texto el
+    # registro del formulario
     # utilizamos el método post
     if request.method == 'POST':
-        # Extraemos los datos ingresados en el input de la descripcion de contactar proveedores
+        # Extraemos los datos ingresados en el input de
+        # la descripcion de contactar proveedores
         redS = request.form['redS']
         sectAgro = request.form['sectAgro']
         mensaje = request.form['mensaje']
-        # Creamos la condición para que no guarde el registro cuando los campos estén vacíos
+        # Creamos la condición para que no guarde el registro
+        #  cuando los campos estén vacíos
         if redS == '' or sectAgro == '' or mensaje == '':
             return redirect(url_for('temas'))
         else:
@@ -152,13 +154,15 @@ def borrar():  # cramos la función borrar
 #################################################################################################################################################################
 
 # Definimos el decorador para registrarse
-
-
+#usamos los método get y post
 @app.route("/registro/", methods=["GET", "POST"])
 def registro():  # creamos la función registro
     data = request.form
+    #abrimos un archivo txt
     with open('resultado.txt', 'a') as archivo:
+        #escribimos en el archivo
         archivo.write(str(data))
+        #imprime el mensaje del archivo
     print(data)
     if request.method == 'POST':
         name = request.form['name']
