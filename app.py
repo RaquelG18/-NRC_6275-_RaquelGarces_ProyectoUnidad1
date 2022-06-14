@@ -51,9 +51,9 @@ temasRedes = []
 @app.route("/temasR", methods=['POST'])
 def temasR():  # Creamos la función temas
     data = request.form
-    with open('resultado.txt', 'w') as archivo: # Abrimos un archivo de texto 
-        archivo.write(str(data)) # Se escribe el archivo de texto
-    print(data) # Imprime en el achivo de texto el registro del formulario 
+    with open('resultado.txt', 'w') as archivo:  # Abrimos un archivo de texto
+        archivo.write(str(data))  # Se escribe el archivo de texto
+    print(data)  # Imprime en el achivo de texto el registro del formulario
     # utilizamos el método post
     if request.method == 'POST':
         # Extraemos los datos ingresados en el input de la descripcion de contactar proveedores
@@ -114,6 +114,10 @@ listaUsuario = []
 @app.route('/enviar', methods=['POST'])
 # creamos la función enviar
 def enviar():
+    data = request.form
+    with open('resultado.txt', 'w') as archivo:  # Abrimos un archivo de texto
+        archivo.write(str(data))  # Se escribe el archivo de texto
+    print(data)  # Imprime en el achivo de texto el registro del formulario
     # utilizamos el método post
     if request.method == 'POST':
         # Extraemos los datos ingresados en el input de la descripcion de contactar proveedores

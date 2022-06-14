@@ -1,1 +1,1 @@
-ImmutableMultiDict([('redS', 'Facebook'), ('sectAgro', 'Agrícola'), ('mensaje', 'NO')])
+ImmutableMultiDict([('nombre_empresa', 'yambal'), ('correoElect', 'orgarces@espe.ec'), ('mensaje', 'Deseo un proveedor ')])
