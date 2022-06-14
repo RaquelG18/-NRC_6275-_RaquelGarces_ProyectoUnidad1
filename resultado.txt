@@ -1,1 +1,1 @@
-ImmutableMultiDict([('name', 'Danna'), ('email', 'orgarces@espe.edu.ec'), ('clave', '12345678'), ('registro', '')])
+ImmutableMultiDict([('redS', 'Facebook'), ('sectAgro', 'Agrícola'), ('mensaje', 'NO')])

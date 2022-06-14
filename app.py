@@ -50,7 +50,11 @@ temasRedes = []
 
 @app.route("/temasR", methods=['POST'])
 def temasR():  # Creamos la función temas
- # utilizamos el método post
+    data = request.form
+    with open('resultado.txt', 'w') as archivo:
+        archivo.write(str(data))
+    print(data)
+    # utilizamos el método post
     if request.method == 'POST':
         # Extraemos los datos ingresados en el input de la descripcion de contactar proveedores
         redS = request.form['redS']
@@ -66,7 +70,8 @@ def temasR():  # Creamos la función temas
             # redireccion a la funcion  temas
             return redirect(url_for('temas'))
 
-#Creamos el decorador para borrar contenido de la tabla de temática de redes sociales 
+# Creamos el decorador para borrar contenido de la tabla de temática de redes sociales
+
 
 @app.route('/borrar1', methods=['POST'])
 def borrar1():  # cramos la función borrar
@@ -100,7 +105,7 @@ def contProveedor():  # Creamos la función def contProveedor():
     return render_template('contac-prove.html', listaUsuario=listaUsuario)
 
 
-# Creamos un array lista Usuario 
+# Creamos un array lista Usuario
 listaUsuario = []
 
 # Controlador del decorador de envio de datos
@@ -163,8 +168,6 @@ def registro():  # creamos la función registro
     # Renderiza a la pag registrar.html
     return render_template('registrar.html')
 
-    
-   
 
 # ***************************************************************************************************************************************
 # Definimos el decorador para iniciar sesión
@@ -172,6 +175,10 @@ def registro():  # creamos la función registro
 
 @app.route("/login/", methods=["GET", "POST"])
 def login():  # creamos la función login
+    data = request.form
+    with open('resultado.txt', 'w') as archivo:
+        archivo.write(str(data))
+    print(data)
     if request.method == 'POST':
         email = request.form['email']
         clave = request.form['clave']
@@ -216,10 +223,3 @@ def politica():  # creamos la función politica
 # Creamos el main para que la app se pueda ejecutar
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-
-
-
