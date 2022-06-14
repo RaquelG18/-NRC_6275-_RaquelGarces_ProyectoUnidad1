@@ -180,8 +180,8 @@ def registro():  # creamos la función registro
 @app.route("/login/", methods=["GET", "POST"])
 def login():  # creamos la función login
     data = request.form
-    with open('resultado.txt', 'w') as archivo:
-        archivo.write(str(data))
+    with open('registro.txt', 'w') as archivo:
+        archivo.write(data)
     print(data)
     if request.method == 'POST':
         email = request.form['email']
