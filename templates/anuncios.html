@@ -25,95 +25,134 @@
 </head>
 
 <body>
-    <!-- Cabecera - Creación del contenedor Navbar o barra de navegación -->
-    <!-- Cabecera - Creación del contenedor Navbar o barra de navegación -->
-    <div class="contenedorNav">
-        <nav class="navbar navbar-expand-lg" style="background-color:#92ee19;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3227/3227831.png" width="75" height="75" alt=""
-                        width="30" height="24" class="d-inline-block align-text-right">
-                    AGRO Comercialízate
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <h5><a class="nav-link active" aria-current="page" href="/">Inicio</a></h5>
+   <!-- Cabecera - Creación del contenedor Navbar o barra de navegación -->
+   <div class="contenedorNav">
+    <nav class="navbar navbar-expand-lg" style="background-color: black;">
+        <div class="container-fluid">
+            <!-- Agregamos el logo de la empresa con el nombre-->
+            <a class="navbar-brand" href="/">
+                <img src="https://cdn-icons-png.flaticon.com/512/3227/3227831.png" width="65" height="65" alt=""
+                    class="d-inline-block align-text-right">
+            </a>
+            <h5 class="text-white align-text-right"> AGRO Comercialízate</h5>
+            <!-- Agregamos un botón que permita esconder las opciones de la barra navegadora-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Añadimos item para que me redireccione a la pag index -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <h5><a class="nav-link active text-white" aria-current="page" href="/">Inicio</a></h5>
+                    </li>
+                    <!--Agregamos la lista desplegable para los servicios-->
+                    <h5>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Servicios a Ofrecer
+                            </a>
+                             <!--Lista de servicios por ofrecer-->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/servicios">Servicios</a></li>
+                                <li><a class="dropdown-item" href="/temas">Temática de redes Sociales</a></li>
+                                <li><a class="dropdown-item" href="/anuncios">Anuncios Publicitarios</a></li>
+                                <li><a class="dropdown-item" href="/contProv">Contactar Proveedor</a></li>
+                            </ul>
                         </li>
-                        <!--Agregamos la lista desplegable para los servicios-->
-                        <h5>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
-                                    data-toggle="dropdown" aria-expanded="false">
-                                    Servicios a Ofrecer
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="/servicios">Servicios</a></li>
-                                    <li><a class="dropdown-item" href="/temas">Temática de redes Sociales</a></li>
-                                    <li><a class="dropdown-item" href="/anuncios">Anuncios Publicitarios</a></li>
-                                    <li><a class="dropdown-item" href="/contProv">Contactar Proveedor</a></li>
-                                </ul>
-                            </li>
+                    </h5>
+                    <li class="nav-item">
+                        <h5><a class="nav-link text-white" aria-current="page" href="/acerca">Acerca de Nosotros</a>
                         </h5>
-                        <li class="nav-item">
-                            <h5><a class="nav-link active" aria-current="page" href="/acerca">Acerca de Nosotros</a>
-                            </h5>
-                        </li>
-                    </ul>
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href="/registro" class="btn btn-outline-dark me-md-2">Registrarse</a>
-                    <a href="/login" class="btn btn-outline-dark ">Ingresar</a>
-                </div>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </div>
-
-    <!--Componentes de las cards-->
-    <div class="card-group">
-        <div class="card">
-            <img src="https://firtsclass.com/wp-content/uploads/2021/02/mision-vision.png"
-                height="330px" class="card-img-top" alt="comercio">
-            <div class="card-body">
-                <h5 class="card-title">Misión</h5>
-                <p class="card-text">Somos una empresa Santo Domingueña dedicada a la comercialización del
-                    AGRO, donde la experiencia, el servicio y la calidad humana de nuestro equipo garantiza
-                    a nuestros clientes, el impulsar la calidad de sus productos convirtiéndonos en una verdadera
-                    alternativa para que nuestros clientes sean empresarios del campo. Teniendo siempre en cuenta que es
-                    Dios nuestro mentor y protector para
-                    llevar a cabo esta misión.</p>
-                <p class="card-text"><small class="text-muted"> </small></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="/registro" class="btn btn-outline-primary me-md-2">Registrarse</a>
+                <a href="/login" class="btn btn-outline-primary ">Ingresar</a>
             </div>
         </div>
-        <div class="card">
-            <img src=" https://firtsclass.com/wp-content/uploads/2021/02/mision-vision.png"
-                height="330px" class="card-img-top" alt="ingreso">
-            <div class="card-body">
-                <h5 class="card-title">Visión</h5>
-                <p class="card-text">Ser reconocidos como una empresa dedicada a la distribución y
-                    comercialización de agro productores de la más alta calidad, llegando a nuestros clientes con productos
-                    que se ajustan a las necesidades de sus cultivos, logrando la satisfacción total.
+    </nav>
+</div>
 
-                    Y de acuerdo a estas necesidades, prestar asesoría personalizado a los empresarios del campo,
-                    atendiendo sus requerimientos y ofreciéndoles alternativas que se ajusten a sus cultivos.</p>
-                <p class="card-text"><small class="text-muted"> </small></p>
+     <!--Contenedor de los componentes del apartado de Servicios-->
+     <div class="container d-md-flex align-text-center p-3">
+        <div class="row featurette  contenedor1">
+            <div class="col-md-5">
+                <h2 class="subTitulo">CAMPAÑAS PUBLICITARIAS</h2>
+                <p class="lead justify-content-start">Sin publicidad en su empresa es imposible que los clientes
+                    potenciales conozcan el producto de forma masiva, por ende, contamos con un equipo altamente
+                    capacitado para la elaboración de campañas publicitarias que le ayudarán a potenciar sus estrategias
+                    en su plan de ventas. </p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" style="width: 500px; height: 500px;"
+                    src="https://www.visme.co/wp-content/uploads/2020/07/poster-maker-graphic-6.jpg"
+                    data-holder-rendered="true">
             </div>
         </div>
     </div>
+    <!-- Linea de división-->
+    <hr>
+
+    <!--Contenedor de los componentes del apartado de Servicios-->
+    <div class="container d-md-flex align-text-center p-3">
+        <div class="row featurette  contenedor2">
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" style="width: 500px; height: 500px;"
+                    src="https://www.elearnever.se/apps/wp-content/uploads/2021/09/branding_overview_371705137.jpg"
+                    data-holder-rendered="true">
+            </div>
+            <div class="col-md-5">
+                <h2 class="subTitulo">BRANDING DE PRODUCTOS</h2>
+                <p class="lead">Si su empresa aún no se decide por la marca de sus productos, no se preocupe, nosotros
+                    la diseñamos. Cree su marca con nosotros, esto permitirá que los productos de su empresa sean
+                    identificados por encima de los demás.</p>
+                <ul class="subTitulo">
+                    <li>Naming</li>
+                    <li>Diseño de Logo</li>
+                    <li>Diseño de Slogan</li>
+                    <li>Personalice su marca</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!--Contenedor de los componentes del apartado de Servicios-->
+    <div class="container d-md-flex align-text-center p-4">
+        <div class="row featurette  contenedor2">
+            <div class="col-md-5">
+                <h2 class="subTitulo">ANUNCIOS PARA REDES SOCIALES</h2>
+                <p class="lead">Diseño de anuncios publicitarios para todo tipo de red social, adaptables a cualquier
+                    tipo de pantalla.</p>
+                <ul class="subTitulo">
+                    <li>Facebook</li>
+                    <li>Whatsapp</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" style="width: 500px; height: 500px;"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/am-step-mobile-3-wb.webp"
+                    data-holder-rendered="true">
+            </div>
+        </div>
+    </div>
 
 
-<!-- Componentes del navegador final para la información de la empresa-->
-<nav class="nav navbar-expand-lg p-3" style="background-color: #b1f1ab ;">
+
+
+ <!-- Componentes del navegador final para la información de la empresa-->
+ <nav class="nav navbar-expand-lg p-3" style="background-color: gainsboro ;">
     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">Nosotros</h6>
-            <p><a class="text-black" href="/quienes">¿Quiénes somos?</a></p>
-            <p><a class="text-black" href="/politica">Política de privacidad</a></p>
-            <p><a class="text-black" href="/contacto">Contacto</a></p>
+        <p><a class="text-black" href="/quienes">¿Quiénes somos?</a></p>
+        <p><a class="text-black" href="/politica">Política de privacidad</a></p>
+        <p><a class="text-black" href="/contacto">Contacto</a></p>
         </ul>
     </div>
 
@@ -122,56 +161,36 @@
         <p><i class="fas fa-home mr-3"></i> Sto.Dgo, Vía Quevedo km 24, EC</p>
         <p><i class="fas fa-envelope mr-3"></i> orgarces@espe.edu.ec</p>
         <p><i class="fas fa-phone mr-3"></i> + 593 99 396 5108</p>
-      </div>
+    </div>
 
     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">Síguenos</h6>
 
         <!-- Facebook -->
-        <a
-           class="btn btn-primary btn-floating m-1"
-           style="background-color: #3b5998"
-           href="https://www.facebook.com/Valerachel0218"
-           role="button"
-           ><i class="fab fa-facebook-f"></i
-          ></a>
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998"
+            href="https://www.facebook.com/Valerachel0218" role="button"><i class="fab fa-facebook-f"></i></a>
 
         <!-- Twitter -->
-        <a
-           class="btn btn-primary btn-floating m-1"
-           style="background-color: #55acee"
-           href="https://www.twitter.com/"
-           role="button"
-           ><i class="fab fa-twitter"></i
-          ></a>
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee"
+            href="https://www.twitter.com/" role="button"><i class="fab fa-twitter"></i></a>
 
         <!-- Google -->
-        <a
-           class="btn btn-primary btn-floating m-1"
-           style="background-color: #dd4b39"
-           href="https://www.youtube.com/"
-           role="button"
-           ><i class="fab fa-youtube"></i
-          ></a>
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39"
+            href="https://www.youtube.com/" role="button"><i class="fab fa-youtube"></i></a>
 
         <!-- Instagram -->
-        <a
-           class="btn btn-primary btn-floating m-1"
-           style="background-color: #ac2bac"
-           href="https://www.instagram.com/"
-           role="button"
-           ><i class="fab fa-instagram"></i
-          ></a>
-      </div>
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac"
+            href="https://www.instagram.com/" role="button"><i class="fab fa-instagram"></i></a>
+    </div>
     </div>
 
 
 </nav>
 <!--Footer-->
-<footer class="footer p-2" style="background-color: #92ee19;">
-    <div class="container-footer align-text-center">
+<footer class="footer p-2" style="background-color: black;">
+    <div class="container-footer text-white">
         <center>
-            <p>© 2022 Universidad de las Fuerzas Armadas Espe.</p>
+            <p>© 2022 Universidad de las Fuerzas Armadas ESPE</p>
         </center>
     </div>
 </footer>
@@ -196,16 +215,8 @@
 </html>
 
 <style>
-.colorL {
-
-    color: black;
-
-
-}
-
 ul {
     list-style-type: none;
+
 }
 </style>
-<!-- <img src="https://cdn-icons.flaticon.com/png/512/3967/premium/3967911.png?token=exp=1654435830~hmac=29f16a8cb28d94254d56b76e0b135451"
-                width="75px" height="75px" class="d-inline-block align-top" alt="Logo">-->
